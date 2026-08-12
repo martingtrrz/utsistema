@@ -69,12 +69,16 @@ export function Button({
   variant = 'primary',
   small,
   type = 'button',
+  disabled,
+  style,
 }: {
   children: ReactNode
   onClick?: () => void
   variant?: 'primary' | 'secondary' | 'gold' | 'ghost'
   small?: boolean
   type?: 'button' | 'submit'
+  disabled?: boolean
+  style?: React.CSSProperties
 }) {
   const styles: Record<string, React.CSSProperties> = {
     primary: { background: 'var(--primary)', color: '#fff', border: '1px solid var(--primary)' },
@@ -86,13 +90,17 @@ export function Button({
     <button
       type={type}
       onClick={onClick}
+      disabled={disabled}
       style={{
         ...styles[variant],
         borderRadius: 7,
         padding: small ? '6px 12px' : '9px 16px',
         fontSize: small ? 12.5 : 13.5,
         fontWeight: 600,
-        cursor: 'pointer',
+        cursor: disabled ? 'not-allowed' : 'pointer',
+        opacity: disabled ? 0.6 : 1,
+        transition: 'all 0.2s ease',
+        ...style,
       }}
     >
       {children}

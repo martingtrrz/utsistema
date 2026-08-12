@@ -1,0 +1,91 @@
+course_id,course_name,instructor_id,instructor_name,grupo_id,grupo_name,room_id,slot_id,day,start,end,session_number,group_size
+MAT01-81,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-1,IDGS 8-1,1,S1,Mon,07:00,07:50,1,25
+MAT01-81,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-1,IDGS 8-1,1,S2,Mon,07:50,08:40,2,25
+MAT03-81,Fundamentos de TI,DOC003,Irene,IDGS 8-1,IDGS 8-1,LABORATORIO IOT,S3,Mon,08:40,09:30,1,25
+MAT03-81,Fundamentos de TI,DOC003,Irene,IDGS 8-1,IDGS 8-1,LABORATORIO IOT,S4,Mon,09:30,10:20,2,25
+MAT09-81,Formacion sociocultural I,DOC008,Marisol,IDGS 8-1,IDGS 8-1,4,S10,Tue,07:00,07:50,1,25
+MAT07-81,Ingles,DOC006,Andrea Reyes,IDGS 8-1,IDGS 8-1,1,S11,Tue,07:50,08:40,3,25
+MAT03-81,Fundamentos de TI,DOC003,Irene,IDGS 8-1,IDGS 8-1,LABORATORIO IOT,S12,Tue,08:40,09:30,3,25
+MAT02-81,Desarrollo de habilidades de pensamiento l??gico,DOC002,Miguel,IDGS 8-1,IDGS 8-1,1,S13,Tue,09:30,10:20,2,25
+MAT02-81,Desarrollo de habilidades de pensamiento l??gico,DOC002,Miguel,IDGS 8-1,IDGS 8-1,1,S14,Tue,10:40,11:30,1,25
+MAT01-81,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-1,IDGS 8-1,1,S15,Tue,11:30,12:20,4,25
+MAT04-81,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-1,IDGS 8-1,LABORATORIO CISCO,S19,Wed,07:00,07:50,1,25
+MAT04-81,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-1,IDGS 8-1,LABORATORIO CISCO,S20,Wed,07:50,08:40,4,25
+MAT03-81,Fundamentos de TI,DOC003,Irene,IDGS 8-1,IDGS 8-1,LABORATORIO IOT,S21,Wed,08:40,09:30,4,25
+MAT03-81,Fundamentos de TI,DOC003,Irene,IDGS 8-1,IDGS 8-1,LABORATORIO IOT,S22,Wed,09:30,10:20,5,25
+MAT07-81,Ingles,DOC006,Andrea Reyes,IDGS 8-1,IDGS 8-1,1,S23,Wed,10:40,11:30,4,25
+MAT07-81,Ingles,DOC006,Andrea Reyes,IDGS 8-1,IDGS 8-1,1,S24,Wed,11:30,12:20,2,25
+MAT01-81,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-1,IDGS 8-1,1,S25,Wed,12:20,13:10,6,25
+MAT08-81,Expresion oral y escrita,DOC005,Liney,IDGS 8-1,IDGS 8-1,1,S26,Wed,13:10,14:00,4,25
+MAT04-81,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-1,IDGS 8-1,LABORATORIO CISCO,S28,Thu,07:00,07:50,3,25
+MAT01-81,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-1,IDGS 8-1,1,S29,Thu,07:50,08:40,3,25
+MAT08-81,Expresion oral y escrita,DOC005,Liney,IDGS 8-1,IDGS 8-1,1,S30,Thu,08:40,09:30,1,25
+MAT08-81,Expresion oral y escrita,DOC005,Liney,IDGS 8-1,IDGS 8-1,1,S31,Thu,09:30,10:20,5,25
+MAT09-81,Formacion sociocultural I,DOC008,Marisol,IDGS 8-1,IDGS 8-1,4,S32,Thu,10:40,11:30,2,25
+MAT02-81,Desarrollo de habilidades de pensamiento l??gico,DOC002,Miguel,IDGS 8-1,IDGS 8-1,1,S37,Fri,07:00,07:50,3,25
+MAT01-81,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-1,IDGS 8-1,1,S38,Fri,07:50,08:40,5,25
+MAT08-81,Expresion oral y escrita,DOC005,Liney,IDGS 8-1,IDGS 8-1,1,S39,Fri,08:40,09:30,2,25
+MAT08-81,Expresion oral y escrita,DOC005,Liney,IDGS 8-1,IDGS 8-1,1,S40,Fri,09:30,10:20,3,25
+MAT04-81,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-1,IDGS 8-1,LABORATORIO CISCO,S41,Fri,10:40,11:30,2,25
+MAT04-81,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-1,IDGS 8-1,LABORATORIO CISCO,S42,Fri,11:30,12:20,5,25
+MAT07-81,Ingles,DOC006,Andrea Reyes,IDGS 8-1,IDGS 8-1,1,S43,Fri,12:20,13:10,1,25
+MAT08-82,Expresion oral y escrita,DOC005,Liney,IDGS 8-2,IDGS 8-2,3,S1,Mon,07:00,07:50,4,19
+MAT09-82,Formacion sociocultural I,DOC008,Marisol,IDGS 8-2,IDGS 8-2,3,S2,Mon,07:50,08:40,1,19
+MAT04-82,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-2,IDGS 8-2,LABORATORIO CISCO,S3,Mon,08:40,09:30,2,19
+MAT04-82,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-2,IDGS 8-2,LABORATORIO CISCO,S4,Mon,09:30,10:20,3,19
+MAT03-82,Fundamentos de TI,DOC003,Irene,IDGS 8-2,IDGS 8-2,LABORATORIO IOT,S5,Mon,10:40,11:30,3,19
+MAT04-82,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-2,IDGS 8-2,LABORATORIO CISCO,S10,Tue,07:00,07:50,5,19
+MAT04-82,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-2,IDGS 8-2,LABORATORIO CISCO,S11,Tue,07:50,08:40,1,19
+MAT08-82,Expresion oral y escrita,DOC005,Liney,IDGS 8-2,IDGS 8-2,3,S12,Tue,08:40,09:30,2,19
+MAT03-82,Fundamentos de TI,DOC003,Irene,IDGS 8-2,IDGS 8-2,LABORATORIO IOT,S13,Tue,09:30,10:20,5,19
+MAT03-82,Fundamentos de TI,DOC003,Irene,IDGS 8-2,IDGS 8-2,LABORATORIO IOT,S14,Tue,10:40,11:30,4,19
+MAT02-82,Desarrollo de habilidades de pensamiento l??gico,DOC002,Miguel,IDGS 8-2,IDGS 8-2,3,S15,Tue,11:30,12:20,3,19
+MAT01-82,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-2,IDGS 8-2,2,S16,Tue,12:20,13:10,1,19
+MAT02-82,Desarrollo de habilidades de pensamiento l??gico,DOC002,Miguel,IDGS 8-2,IDGS 8-2,3,S19,Wed,07:00,07:50,1,19
+MAT03-82,Fundamentos de TI,DOC003,Irene,IDGS 8-2,IDGS 8-2,LABORATORIO IOT,S20,Wed,07:50,08:40,1,19
+MAT07-82,Ingles,DOC006,Andrea Reyes,IDGS 8-2,IDGS 8-2,1,S21,Wed,08:40,09:30,2,19
+MAT07-82,Ingles,DOC006,Andrea Reyes,IDGS 8-2,IDGS 8-2,1,S22,Wed,09:30,10:20,1,19
+MAT01-82,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-2,IDGS 8-2,2,S23,Wed,10:40,11:30,2,19
+MAT01-82,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-2,IDGS 8-2,2,S24,Wed,11:30,12:20,5,19
+MAT02-82,Desarrollo de habilidades de pensamiento l??gico,DOC002,Miguel,IDGS 8-2,IDGS 8-2,3,S28,Thu,07:00,07:50,2,19
+MAT04-82,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-2,IDGS 8-2,LABORATORIO CISCO,S29,Thu,07:50,08:40,4,19
+MAT01-82,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-2,IDGS 8-2,2,S30,Thu,08:40,09:30,3,19
+MAT03-82,Fundamentos de TI,DOC003,Irene,IDGS 8-2,IDGS 8-2,LABORATORIO IOT,S31,Thu,09:30,10:20,2,19
+MAT07-82,Ingles,DOC006,Andrea Reyes,IDGS 8-2,IDGS 8-2,1,S32,Thu,10:40,11:30,4,19
+MAT08-82,Expresion oral y escrita,DOC005,Liney,IDGS 8-2,IDGS 8-2,3,S33,Thu,11:30,12:20,3,19
+MAT08-82,Expresion oral y escrita,DOC005,Liney,IDGS 8-2,IDGS 8-2,3,S37,Fri,07:00,07:50,5,19
+MAT08-82,Expresion oral y escrita,DOC005,Liney,IDGS 8-2,IDGS 8-2,3,S38,Fri,07:50,08:40,1,19
+MAT01-82,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-2,IDGS 8-2,2,S39,Fri,08:40,09:30,6,19
+MAT01-82,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-2,IDGS 8-2,2,S40,Fri,09:30,10:20,4,19
+MAT09-82,Formacion sociocultural I,DOC008,Marisol,IDGS 8-2,IDGS 8-2,3,S41,Fri,10:40,11:30,2,19
+MAT07-82,Ingles,DOC006,Andrea Reyes,IDGS 8-2,IDGS 8-2,1,S42,Fri,11:30,12:20,3,19
+MAT02-83,Desarrollo de habilidades de pensamiento l??gico,DOC002,Miguel,IDGS 8-3,IDGS 8-3,2,S1,Mon,07:00,07:50,2,21
+MAT03-83,Fundamentos de TI,DOC003,Irene,IDGS 8-3,IDGS 8-3,LABORATORIO IOT,S2,Mon,07:50,08:40,1,21
+MAT01-83,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-3,IDGS 8-3,2,S3,Mon,08:40,09:30,2,21
+MAT07-83,Ingles,DOC006,Andrea Reyes,IDGS 8-3,IDGS 8-3,4,S4,Mon,09:30,10:20,2,21
+MAT04-83,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-3,IDGS 8-3,LABORATORIO CISCO,S5,Mon,10:40,11:30,5,21
+MAT08-83,Expresion oral y escrita,DOC005,Liney,IDGS 8-3,IDGS 8-3,3,S10,Tue,07:00,07:50,1,21
+MAT08-83,Expresion oral y escrita,DOC005,Liney,IDGS 8-3,IDGS 8-3,3,S11,Tue,07:50,08:40,4,21
+MAT04-83,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-3,IDGS 8-3,LABORATORIO CISCO,S12,Tue,08:40,09:30,2,21
+MAT01-83,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-3,IDGS 8-3,2,S13,Tue,09:30,10:20,3,21
+MAT01-83,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-3,IDGS 8-3,2,S14,Tue,10:40,11:30,6,21
+MAT03-83,Fundamentos de TI,DOC003,Irene,IDGS 8-3,IDGS 8-3,LABORATORIO IOT,S15,Tue,11:30,12:20,2,21
+MAT07-83,Ingles,DOC006,Andrea Reyes,IDGS 8-3,IDGS 8-3,4,S19,Wed,07:00,07:50,1,21
+MAT07-83,Ingles,DOC006,Andrea Reyes,IDGS 8-3,IDGS 8-3,4,S20,Wed,07:50,08:40,3,21
+MAT04-83,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-3,IDGS 8-3,LABORATORIO CISCO,S21,Wed,08:40,09:30,4,21
+MAT01-83,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-3,IDGS 8-3,2,S22,Wed,09:30,10:20,5,21
+MAT03-83,Fundamentos de TI,DOC003,Irene,IDGS 8-3,IDGS 8-3,LABORATORIO IOT,S23,Wed,10:40,11:30,5,21
+MAT08-83,Expresion oral y escrita,DOC005,Liney,IDGS 8-3,IDGS 8-3,3,S24,Wed,11:30,12:20,5,21
+MAT08-83,Expresion oral y escrita,DOC005,Liney,IDGS 8-3,IDGS 8-3,3,S25,Wed,12:20,13:10,3,21
+MAT09-83,Formacion sociocultural I,DOC008,Marisol,IDGS 8-3,IDGS 8-3,2,S26,Wed,13:10,14:00,1,21
+MAT09-83,Formacion sociocultural I,DOC008,Marisol,IDGS 8-3,IDGS 8-3,2,S27,Wed,14:00,14:50,2,21
+MAT01-83,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-3,IDGS 8-3,2,S28,Thu,07:00,07:50,1,21
+MAT02-83,Desarrollo de habilidades de pensamiento l??gico,DOC002,Miguel,IDGS 8-3,IDGS 8-3,2,S29,Thu,07:50,08:40,1,21
+MAT04-83,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-3,IDGS 8-3,LABORATORIO CISCO,S30,Thu,08:40,09:30,1,21
+MAT04-83,Fundamentos de Redes,DOC004,Yohani Valdez,IDGS 8-3,IDGS 8-3,LABORATORIO CISCO,S31,Thu,09:30,10:20,3,21
+MAT08-83,Expresion oral y escrita,DOC005,Liney,IDGS 8-3,IDGS 8-3,3,S32,Thu,10:40,11:30,2,21
+MAT01-83,Algebra Lineal,DOC001,Yerenia Cano,IDGS 8-3,IDGS 8-3,2,S37,Fri,07:00,07:50,4,21
+MAT02-83,Desarrollo de habilidades de pensamiento l??gico,DOC002,Miguel,IDGS 8-3,IDGS 8-3,2,S38,Fri,07:50,08:40,3,21
+MAT03-83,Fundamentos de TI,DOC003,Irene,IDGS 8-3,IDGS 8-3,LABORATORIO IOT,S39,Fri,08:40,09:30,4,21
+MAT03-83,Fundamentos de TI,DOC003,Irene,IDGS 8-3,IDGS 8-3,LABORATORIO IOT,S40,Fri,09:30,10:20,3,21
+MAT07-83,Ingles,DOC006,Andrea Reyes,IDGS 8-3,IDGS 8-3,4,S41,Fri,10:40,11:30,4,21

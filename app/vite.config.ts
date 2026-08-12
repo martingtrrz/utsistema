@@ -8,5 +8,11 @@ export default defineConfig({
   resolve: {
     alias: { '@': path.resolve(__dirname, './src') },
   },
-  server: { host: '0.0.0.0', port: 5173 },
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+    watch: {
+      ignored: ['**/timetable_mvp/**'],
+    },
+  },
 })
