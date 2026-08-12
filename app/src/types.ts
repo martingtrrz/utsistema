@@ -1,0 +1,23 @@
+export type PageId =
+  | 'dashboard'
+  | 'mi-espacio'
+  | 'grupos'
+  | 'alumnos'
+  | 'docentes'
+  | 'carreras'
+  | 'materias'
+  | 'calificaciones'
+  | 'asistencia'
+  | 'horarios'
+  | 'inscripciones'
+  | 'kardex'
+  | 'biblioteca'
+  | 'inventarios'
+  | 'plataforma-trabajos'
+  | 'servicios'
+  | 'reportes'
+  | 'configuracion'
+
+export type Role = 'Administrador' | 'Control Escolar' | 'Docente' | 'Alumno'
+
+export type ViewMode = 'public' | 'login' | 'app'
