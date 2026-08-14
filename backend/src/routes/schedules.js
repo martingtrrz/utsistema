@@ -57,6 +57,77 @@ router.put('/:id', requireRole('Administrador', 'Control Escolar'), async (req, 
   res.json(rows[0])
 })
 
+// DELETE /api/schedules - Eliminar todos los horarios de una carrera y cuatrimestre
+router.delete('/', requireRole('Administrador', 'Control Escolar'), async (req, res) => {
+  const { career, cuatrimestre } = req.query
+  if (!career || !cuatrimestre) {
+    return res.status(400).json({ error: 'Se requieren los parámetros de consulta career y cuatrimestre' })
+  }
+  
+  try {
+    // Eliminar solo los slots asociados a grupos de esa carrera y cuatrimestre
+    await pool.query(`
+      DELETE sl FROM schedule_slots sl
+      JOIN \`groups\` g ON sl.group_id = g.id
+      WHERE g.career_id = ? AND g.cuatrimestre = ?
+    `, [career, cuatrimestre])
+    
+    res.json({ 
+      success: true, 
+      message: `Los horarios de la carrera ${career} para el cuatrimestre ${cuatrimestre} fueron eliminados correctamente.` 
+    })
+  } catch (error) {
+    console.error('Error al eliminar los horarios filtrados:', error)
+    res.status(500).json({ error: 'Error interno del servidor al eliminar los horarios.' })
+  }
+})
+
+// POST /api/schedules/save - Guardar bulk de horarios
+router.post('/save', requireRole('Administrador', 'Control Escolar'), async (req, res) => {
+  const { slots } = req.body
+  if (!Array.isArray(slots)) {
+    return res.status(400).json({ error: 'slots debe ser un array' })
+  }
+  
+  const connection = await pool.getConnection()
+  try {
+    await connection.beginTransaction()
+    
+    // Eliminar horarios anteriores
+    await connection.query('DELETE FROM schedule_slots')
+    
+    // Insertar los nuevos slots
+    for (const slot of slots) {
+      let subjectId = slot.subjectId
+      
+      // Fallback a buscar por nombre y grupo si no viene subjectId
+      if (!subjectId) {
+        const [subj] = await connection.query(
+          'SELECT id FROM subjects WHERE nombre = ? AND group_id = ?', 
+          [slot.materia, slot.grupo]
+        )
+        subjectId = subj.length > 0 ? subj[0].id : null
+      }
+      
+      if (subjectId) {
+        await connection.query(
+          'INSERT INTO schedule_slots (group_id, dia, hora, subject_id, aula) VALUES (?, ?, ?, ?, ?)',
+          [slot.grupo, slot.dia, slot.hora, subjectId, slot.aula]
+        )
+      }
+    }
+    
+    await connection.commit()
+    res.json({ success: true, message: 'Horarios guardados correctamente en la base de datos.' })
+  } catch (error) {
+    await connection.rollback()
+    console.error('Error al guardar horarios:', error)
+    res.status(500).json({ error: 'Error interno del servidor al guardar los horarios.' })
+  } finally {
+    connection.release()
+  }
+})
+
 router.delete('/:id', requireRole('Administrador', 'Control Escolar'), async (req, res) => {
   const [result] = await pool.query('DELETE FROM schedule_slots WHERE id = ?', [req.params.id])
   if (!result.affectedRows) return res.status(404).json({ error: 'Horario no encontrado' })
@@ -111,7 +182,22 @@ router.post('/generate', requireRole('Administrador', 'Control Escolar'), async 
     pythonProcess.on('close', (code) => {
       console.log(`Proceso de generación finalizó con código: ${code}`)
       if (code === 0) {
-        res.json({ success: true, message: 'Horarios generados correctamente en la base de datos.', stdout })
+        let slots = []
+        try {
+          const startIndex = stdout.indexOf('JSON_START')
+          const endIndex = stdout.indexOf('JSON_END')
+          if (startIndex !== -1 && endIndex !== -1) {
+            const jsonText = stdout.substring(startIndex + 'JSON_START'.length, endIndex).trim()
+            slots = JSON.parse(jsonText)
+          }
+        } catch (e) {
+          console.error('Error al parsear el JSON del solver:', e)
+        }
+        res.json({ 
+          success: true, 
+          message: 'Horarios generados correctamente (Borrador). Presiona Guardar para confirmar.', 
+          slots 
+        })
       } else {
         console.error('Error del solver en python:', stderr || stdout)
         res.status(500).json({ error: 'Error al generar los horarios.', details: stderr || stdout })

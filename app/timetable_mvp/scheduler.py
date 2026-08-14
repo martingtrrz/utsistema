@@ -457,8 +457,32 @@ def main():
     schedule_df.to_csv(output_path, index=False)
     print(f"Horario exportado a {output_path}. Total: {len(rows)} sesiones.")
 
-    # Guardar en MySQL
-    save_to_mysql(schedule_df)
+    # Convertir a JSON y escribir en stdout para que el backend lo pueda leer
+    import json
+    slots_json = []
+    for _, row in schedule_df.iterrows():
+        # Traducir día a español si está en inglés, para consistencia
+        day_es = row["day"]
+        day_map = {
+            "Mon": "Lunes", "Tue": "Martes", "Wed": "Miércoles", 
+            "Thu": "Jueves", "Fri": "Viernes", "Sat": "Sábado", "Sun": "Domingo"
+        }
+        if day_es in day_map:
+            day_es = day_map[day_es]
+            
+        slots_json.append({
+            "dia": day_es,
+            "hora": f"{row['start']} – {row['end']}",
+            "materia": row["course_name"],
+            "docente": row["instructor_name"],
+            "aula": str(row["room_id"]),
+            "grupo": row["grupo_id"],
+            "subjectId": row["course_id"]
+        })
+        
+    print("JSON_START")
+    print(json.dumps(slots_json, ensure_ascii=False))
+    print("JSON_END")
 
 if __name__ == "__main__":
     main()

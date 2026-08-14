@@ -173,6 +173,7 @@ export async function loadAppData() {
     docente: s.docente,
     aula: s.aula,
     grupo: s.group_id,
+    subjectId: s.subject_id,
   }))
   setScheduleSlots(scheduleSlots)
 

@@ -37,6 +37,7 @@ export interface ScheduleSlot {
   docente: string
   aula: string
   grupo: string
+  subjectId?: string
 }
 
 export const SCHEDULE_SLOTS: ScheduleSlot[] = []

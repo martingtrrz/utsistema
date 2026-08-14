@@ -511,7 +511,9 @@ CREATE TABLE `groups` (
 INSERT INTO `groups` (`id`, `nombre`, `career_id`, `cuatrimestre`, `periodo`, `aula`, `turno`) VALUES
 ('IDGS 8-1', 'IDGS 8-1', 'IDGS', '8°', 'Enero – Abril 2025', 'Aula TI-204', 'Matutino'),
 ('IDGS 8-2', 'IDGS 8-2', 'IDGS', '8°', 'Enero – Abril 2025', 'Móvil / Lab TI', 'Matutino'),
-('IDGS 8-3', 'IDGS 8-3', 'IDGS', '8°', 'Enero – Abril 2025', 'Aula TI-206', 'Matutino');
+('IDGS 8-3', 'IDGS 8-3', 'IDGS', '8°', 'Enero – Abril 2025', 'Aula TI-206', 'Matutino'),
+('MECA 8-1', 'MECA 8-1', 'MECA', '8°', 'Enero – Abril 2025', 'Aula MECA-1', 'Matutino'),
+('GEMP 8-1', 'GEMP 8-1', 'GEMP', '8°', 'Enero – Abril 2025', 'Aula GEMP-1', 'Matutino');
 
 -- --------------------------------------------------------
 
@@ -777,7 +779,15 @@ INSERT INTO `subjects` (`id`, `nombre`, `group_id`, `teacher_id`, `docente_nombr
 ('MAT04-83', 'Fundamentos de Redes', 'IDGS 8-3', 'DOC004', 'Yohani Valdez', 4, 75, 'LABORATORIO CISCO', 4),
 ('MAT07-83', 'Ingles', 'IDGS 8-3', 'DOC006', 'Andrea Reyes', 4, 60, 'GENERAL', 4),
 ('MAT08-83', 'Expresion oral y escrita', 'IDGS 8-3', 'DOC005', 'Liney', 4, 75, 'GENERAL', 4),
-('MAT09-83', 'Formacion sociocultural I', 'IDGS 8-3', 'DOC008', 'Marisol', 5, 30, 'GENERAL', 5);
+('MAT09-83', 'Formacion sociocultural I', 'IDGS 8-3', 'DOC008', 'Marisol', 5, 30, 'GENERAL', 5),
+
+-- MECA 8-1
+('MECA01-81', 'Robótica Industrial', 'MECA 8-1', 'DOC001', 'Yerenia Cano', 6, 90, 'GENERAL', 6),
+('MECA02-81', 'Sistemas de Control', 'MECA 8-1', 'DOC003', 'Irene', 5, 75, 'GENERAL', 5),
+
+-- GEMP 8-1
+('GEMP01-81', 'Mercadotecnia Estratégica', 'GEMP 8-1', 'DOC005', 'Liney', 6, 90, 'GENERAL', 6),
+('GEMP02-81', 'Finanzas Corporativas', 'GEMP 8-1', 'DOC008', 'Marisol', 5, 75, 'GENERAL', 5);
 
 
 
