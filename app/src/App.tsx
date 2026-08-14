@@ -58,6 +58,7 @@ export default function App() {
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading')
   const [errorMsg, setErrorMsg] = useState('')
   const [publicStats, setPublicStats] = useState({ totalStudents: 0, totalGroups: 0, promedioGlobal: 0, totalCareers: 0 })
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
 
   // Al montar: si ya hay sesión guardada, recarga datos de app directamente;
   // si no, carga los datos públicos para el portal.
@@ -136,7 +137,7 @@ export default function App() {
       case 'grupos':
         return <Grupos onOpenGroup={openGroup} />
       case 'alumnos':
-        return <ControlAlumnado initialGrupo={grupoFiltro} />
+      return <ControlAlumnado initialGrupo={grupoFiltro} onNavigate={navigate} />
       case 'docentes':
         return <Docentes />
       case 'carreras':
@@ -170,7 +171,7 @@ export default function App() {
 
   return (
     <div style={{ display: 'flex', height: '100vh', background: 'var(--background)', overflow: 'hidden' }}>
-      <Sidebar currentPage={currentPage} onNavigate={navigate} role={role} onExit={handleExit} />
+      <Sidebar currentPage={currentPage} onNavigate={navigate} role={role} onExit={handleExit} collapsed={sidebarCollapsed} onToggleCollapse={() => setSidebarCollapsed((v) => !v)} />
       <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minWidth: 0 }}>
         <TopBar title={PAGE_TITLES[currentPage].title} subtitle={PAGE_TITLES[currentPage].subtitle} role={role} />
         <main style={{ flex: 1, overflowY: 'auto' }}>{renderPage()}</main>

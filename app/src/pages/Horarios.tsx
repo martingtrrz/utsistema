@@ -453,7 +453,11 @@ export default function Horarios() {
       {uniqueHours.length === 0 ? (
         <Card style={{ display: 'grid', placeItems: 'center', padding: 48, textAlign: 'center' }}>
           <div>
-            <div style={{ fontSize: 40, marginBottom: 12 }}>📅</div>
+            <div style={{ width: 56, height: 56, borderRadius: 16, background: 'var(--secondary)', display: 'grid', placeItems: 'center', margin: '0 auto 14px', color: 'var(--primary-dark)' }}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/>
+              </svg>
+            </div>
             <h3 style={{ margin: '0 0 6px', fontSize: 16, fontWeight: 700 }}>Sin horario disponible</h3>
             <p style={{ color: 'var(--muted-foreground)', fontSize: 13, margin: 0 }}>
               No se han encontrado registros de horarios para este grupo.

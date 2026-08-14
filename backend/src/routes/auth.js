@@ -50,6 +50,20 @@ router.get('/me', requireAuth, (req, res) => {
   res.json(req.user)
 })
 
+// GET /api/auth/users - listar usuarios (solo Administrador)
+router.get('/users', requireAuth, requireRole('Administrador'), async (req, res) => {
+  try {
+    const [rows] = await pool.query(
+      'SELECT id, username, nombre, role, student_id, teacher_id FROM users ORDER BY id'
+    )
+    res.json(rows)
+  } catch (err) {
+    console.error(err)
+    res.status(500).json({ error: 'Error al obtener usuarios' })
+  }
+})
+
+
 // POST /api/auth/users - crear usuarios (solo Administrador)
 router.post('/users', requireAuth, requireRole('Administrador'), async (req, res) => {
   const { username, password, nombre, role, studentId, teacherId } = req.body

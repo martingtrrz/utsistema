@@ -67,17 +67,69 @@ button, a { font-family: inherit; transition: transform .18s ease, box-shadow .1
 }
 button:focus-visible, a:focus-visible { outline: 3px solid rgba(25,183,124,.38); outline-offset: 3px; }
 
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
 @media print {
-  @page { size: landscape; margin: 10mm; }
-  html, body, #root { height: auto; background: #fff; }
+  @page { size: portrait; margin: 14mm 16mm; }
+
+  html, body, #root { height: auto; background: #fff; color: #000; }
   #root > div { height: auto !important; overflow: visible !important; }
-  aside, header { display: none !important; }
-  main { overflow: visible !important; }
-  .kardex-page { padding: 0 !important; gap: 10px !important; }
-  .kardex-layout { display: block !important; }
+
+  /* Ocultar sidebar, topbar y controles */
+  aside, header, nav, .no-print { display: none !important; }
+  main { overflow: visible !important; padding: 0 !important; }
+
+  /* Kardex específico */
+  .kardex-page {
+    padding: 0 !important;
+    gap: 12px !important;
+    max-width: 100% !important;
+  }
+  .kardex-layout {
+    display: block !important;
+    grid-template-columns: unset !important;
+  }
+  /* Ocultar panel lateral de búsqueda */
   .kardex-layout > div:first-child { display: none !important; }
-  .kardex-layout > div:last-child { border: 0 !important; padding: 0 !important; box-shadow: none !important; }
+  /* Tarjeta principal sin bordes/sombra */
+  .kardex-layout > div:last-child {
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+  }
+
+  /* Ocultar botones */
   .kardex-page button { display: none !important; }
-  .kardex-page table { font-size: 10pt !important; }
+
+  /* Encabezado institucional al imprimir */
+  .kardex-page::before {
+    content: 'Universidad Tecnológica de la Sierra Lacandona — Kardex Académico Oficial';
+    display: block;
+    font-size: 11pt;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    padding-bottom: 6pt;
+    margin-bottom: 10pt;
+    letter-spacing: .04em;
+  }
+
+  /* Tipografía compacta */
+  .kardex-page h2 { font-size: 13pt !important; }
+  .kardex-page h3 { font-size: 11pt !important; margin-top: 10pt !important; }
+  .kardex-page table { font-size: 9.5pt !important; width: 100% !important; border-collapse: collapse !important; }
+  .kardex-page th { background: #e8f5ef !important; font-size: 8.5pt !important; }
+  .kardex-page td, .kardex-page th { border: 1px solid #ccc !important; padding: 4pt 6pt !important; }
   .kardex-page tr { break-inside: avoid; }
+
+  /* KPIs del resumen */
+  .kardex-page [style*="gridTemplateColumns"] {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 8pt !important;
+  }
 }
+
